@@ -14,4 +14,16 @@ If you're having issues with setting up on IIS, please see [**here**](https://gi
 
 ## ShareX setup
 
-See instructions at [**/wiki/Setup**](https://github.com/aerouk/imageserve/wiki/Setup).
+Below is an example of how ShareX should be configured to work with imageserve. Obviously, you'll need to change the 'password' POST field to whatever you set it to in your config.php file, and also the URL at which imageserve is hosted. In my example, it's set to http://imageserve/.
+
+http://i.imgur.com/KKiaBLd.png
+
+Regex from response: [^,]*$
+URL: http://your.domain/$1$
+
+setting up on the server
+
+Drag contents of downloaded zip file into your preferred directory.
+Setup config file according to your preferences.
+Set write permissions in the directory /public/i for your web server user (or just 777 if you're really lazy) recursively.
+If you have problems with this, consult Google.
