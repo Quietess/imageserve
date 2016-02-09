@@ -10,7 +10,6 @@ if ($index) {
 }
 
 $type = $_GET['type'];
-$ext = str_replace("jpeg", "jpg", $_GET['type']);
 $file = $_GET['file'];
 
 $filelocation = __DIR__ . "/images/$type/$file.$ext";
@@ -20,6 +19,7 @@ if ( ! file_exists($filelocation)) {
     include_once(__DIR__ . '/protected/templates/error.phtml');
     die();
 }
+
 
 $filesize = filesize($filelocation);
 
@@ -36,6 +36,5 @@ if (RAW_IMAGE && strpos($_SERVER['HTTP_USER_AGENT'], "Twitterbot") === false) {
     $time = explode(' ', $time);
     $time = $time[1] + $time[0];
     $start = $time;
-
     require_once(__DIR__ . '/protected/templates/viewer.phtml');
 }
