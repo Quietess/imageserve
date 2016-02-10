@@ -1,3 +1,5 @@
+#I've rewritten all of this code into a much smaller, easier to use, and overall better repo here: https://github.com/Quietess/sharex-upload-script
+
 # imageserve
 
 A ShareX image hosting solution for your own domain.
